@@ -1,13 +1,26 @@
 <html>
 <head>
   <title>Forum</title>
+  <script>
+    function toggleComments(title) {
+      var post = title.parentNode;
+      var comments = post.getElementsByClassName('comments')[0];
+      if (comments.style.display === 'none') {
+        comments.style.display = 'block';
+      } else {
+        comments.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
   <h1>Forum</h1>
   <div class="post">
-    <h2>Post Title</h2>
-    <p>Comment by <strong>Username</strong></p>
-    <p>Posted on <em>12/12/2022 at 12:00pm</em></p>
+    <h2 onclick="toggleComments(this)">Post Title</h2>
+    <div class="comments" style="display: none;">
+      <p>Comment by <strong>Username</strong></p>
+      <p>Posted on <em>12/12/2022 at 12:00pm</em></p>
+    </div>
   </div>
 </body>
 </html>
