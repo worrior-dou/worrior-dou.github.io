@@ -1,7 +1,25 @@
-<html>
-<head>
-  <title>Forum</title>
+<body>
+  <h1>Forum</h1>
+  <button onclick="addPost()">Add Post</button>
+  <div class="posts">
+    <div class="post">
+      <h2 onclick="toggleComments(this)">Post Title</h2>
+      <button onclick="removePost(this)">Remove Post</button>
+      <div class="comments" style="display: none;">
+        <p>Comment by <strong>Username</strong></p>
+        <p>Posted on <em>12/12/2022 at 12:00pm</em></p>
+      </div>
+    </div>
+  </div>
   <script>
+    function addPost() {
+      // code to add a new post to the forum
+    }
+
+    function removePost(button) {
+      // code to remove the post containing the button that was clicked
+    }
+
     function toggleComments(title) {
       var post = title.parentNode;
       var comments = post.getElementsByClassName('comments')[0];
@@ -12,15 +30,4 @@
       }
     }
   </script>
-</head>
-<body>
-  <h1>Forum</h1>
-  <div class="post">
-    <h2 onclick="toggleComments(this)">Post Title</h2>
-    <div class="comments" style="display: none;">
-      <p>Comment by <strong>Username</strong></p>
-      <p>Posted on <em>12/12/2022 at 12:00pm</em></p>
-    </div>
-  </div>
 </body>
-</html>
